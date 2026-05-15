@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#584324",
+                    "secondary-container": "#d8e1e7",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#e1c299",
+                    "on-secondary-fixed-variant": "#3f484d",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#091d2e",
+                    "outline-variant": "#c4c6cd",
+                    "primary-fixed-dim": "#b5c8df",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e2e2e5",
+                    "surface-container": "#eeeef0",
+                    "secondary": "#576065",
+                    "surface-tint": "#4e6073",
+                    "on-secondary-fixed": "#141d21",
+                    "on-tertiary-fixed": "#281801",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f9f9fc",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#bfc8ce",
+                    "tertiary-fixed": "#feddb3",
+                    "on-primary-fixed-variant": "#36485b",
+                    "secondary-fixed": "#dbe4ea",
+                    "primary-fixed": "#d1e4fb",
+                    "outline": "#74777d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e8ea",
+                    "surface-variant": "#e2e2e5",
+                    "on-surface-variant": "#43474c",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#95a8bd",
+                    "on-secondary-container": "#5b6469",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9fc",
+                    "on-background": "#1a1c1e",
+                    "inverse-surface": "#2f3133",
+                    "inverse-primary": "#b5c8df",
+                    "surface": "#f9f9fc",
+                    "tertiary": "#342307",
+                    "on-tertiary-container": "#bea17b",
+                    "inverse-on-surface": "#f0f0f3",
+                    "tertiary-container": "#4c381a",
+                    "surface-container-low": "#f3f3f6",
+                    "on-surface": "#1a1c1e",
+                    "primary": "#152738",
+                    "primary-container": "#2b3d4f",
+                    "surface-dim": "#dadadc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter-desktop": "24px",
+                    "gutter-mobile": "16px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-surface border-b border-outline-variant h-20">
+<div class="max-w-[1280px] mx-auto flex justify-between items-center px-margin-desktop h-full">
+<div class="text-headline-md font-headline-md font-bold tracking-tighter text-primary">SSP CONSTRUCTION</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="#">Projects</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">About Us</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-[#FF6B00] text-white px-6 py-3 font-label-caps text-label-caps font-bold hover:scale-105 active:scale-95 duration-150 transition-all uppercase">Get a Quote</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A professional architectural photograph of a modern construction site at dusk. Steel beams and concrete structures are illuminated by warm golden work lights against a deep navy blue sky. The atmosphere is industrious and high-end, showcasing precision-engineered framing and heavy machinery in a clean, organized manner. The aesthetic is corporate and authoritative, emphasizing dependability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2r3nf2qvM3rmRq2HVvJBTM2KoDAxoXMcMJIh2c1fPvsewrEaMY1IhQdQYXm9-OCT3wk5R_xqj_vAaM2hx4fQ8kbLInmOrAeb1p7dvJTA00lQv9-e7fev_WoyluzT0xTzax_Ir89bQGdWFqtgJX9uCcruo59rinShCGpJI0GpejwZ2W_LOzgh8S-b5QfL5pof0aRnG0Sczo-NejpqmR8dRuWDoTABykQ7_bZev064bJFmOI2wTW5E2N9ADwX1F1jpKFmgxqx2aWGpc"/>
+</div>
+<div class="relative z-10 max-w-[1280px] mx-auto px-margin-desktop text-white">
+<p class="font-label-caps text-label-caps mb-4 tracking-[0.2em] text-[#FF6B00]">BUILDING THE FUTURE</p>
+<h1 class="font-display-lg text-display-lg max-w-2xl mb-6">Excellence in Every Structure.</h1>
+<p class="font-body-lg text-body-lg max-w-xl opacity-90">Explore our signature projects across the sacred landscapes of Mathura and Vrindavan, where tradition meets modern structural integrity.</p>
+</div>
+</section>
+<!-- Project Gallery Bento Grid -->
+<section class="py-24 max-w-[1280px] mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2">Our Masterpieces</h2>
+<div class="h-1 w-24 bg-[#FF6B00]"></div>
+</div>
+<div class="flex space-x-4">
+<span class="font-label-caps text-label-caps border border-outline px-4 py-2 hover:bg-primary hover:text-white cursor-pointer transition-all">All Projects</span>
+<span class="font-label-caps text-label-caps border border-outline px-4 py-2 hover:bg-primary hover:text-white cursor-pointer transition-all">Residential</span>
+<span class="font-label-caps text-label-caps border border-outline px-4 py-2 hover:bg-primary hover:text-white cursor-pointer transition-all">Commercial</span>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Large Feature -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.05)] h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A grand commercial complex building in Vrindavan with a sleek glass facade and modern steel frame. The architecture blends contemporary minimalist design with subtle local cultural accents. The scene is shot in broad daylight with high-contrast shadows, emphasizing the building's structural strength and precision. The surrounding environment is clean and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxUKrhh6t_-RwGQGVu1Kq4ZZ2tcnpQcZoP_yLIvlO_IlBeXbeLR5zkqMCAkDRLSiN7kEC2SxuGiFz8tdIl4GNzKjYIW0gP32ZKqc4M2zhdajhJioV3e63dhjDjTADSs6ICKkk0Qh-7NSGFJ6Oyv4AwDqXd1SjVDa5Ts6GpYq1UEHd_YAGDORvWMNi0Zr0LbwNWbq1DXZBJZ7AH87bnLYU0G_zRbWLVRbF6b3LFuZuhIC6LbMtKDDuCeSsPTmPd13lBGH3FSy2Iz3xk"/>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-primary/90 to-transparent text-white">
+<span class="inline-flex items-center bg-[#FF6B00] px-3 py-1 text-[10px] font-bold tracking-widest uppercase mb-4">
+<span class="material-symbols-outlined text-[14px] mr-2">apartment</span> Commercial
+                        </span>
+<h3 class="font-headline-md text-headline-md mb-1">Vrindavan Commercial Complex</h3>
+<p class="font-body-md opacity-80">Premium business hub with state-of-the-art infrastructure.</p>
+</div>
+</div>
+<!-- Secondary -->
+<div class="col-span-12 md:col-span-4 group relative overflow-hidden bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.05)] h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A luxury residential villa in Mathura, featuring clean white walls, large windows, and premium stone accents. The design is modern yet grounded, with a manicured garden in the foreground. The lighting is soft afternoon sun, casting elegant shadows and highlighting the high-quality finishing and craftsmanship of the construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuLFA80eiQkRyZkHGn1mzqVG3qjewRz_S8jHqhs47OgduthQL-fooaXEcOswxJKrNeqmICBThNfyWqgTZCGAw7JvXFBQmoPgKoesWCKzFUwR8nwTKVcf84iTdr7DkmBZJ9_VuHCrHr-yJJ_nUsX6-782FfkdmGQtpEoGPobcFgXtMYmzcNmHU5WNJnJX3bSM3RB7IUsol1ovDMQIVLVRFxd953wEyIaQXZGaji94CahuoXH45o8x1kfRaVWehvkmU0se88t6LLaTlj"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-white text-primary px-6 py-3 font-label-caps text-label-caps font-bold">View Details</button>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 bg-white border-t border-outline-variant">
+<h3 class="font-headline-md text-[20px] text-primary">Residential Project – Mathura</h3>
+<p class="font-body-md text-secondary">Private 5-Bedroom Luxury Estate</p>
+</div>
+</div>
+<!-- Triple Row -->
+<div class="col-span-12 md:col-span-4 group bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An industrial renovation project showing a large warehouse space being transformed. The image focuses on the raw structural elements, exposed brick, and new steel reinforcements. The lighting is bright and industrial, emphasizing the transformation from an old site to a modern facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhzDkN6H7B4fc2UdbYUh6QzUpiZTkOJspozRdBMsbntorTUmgZAIUQRt6Akcnr4qBEhl-Sv_UBluq-QNOXx4cfdX8mlXuysca5Hkzr3D9lc0iONuRlzBlyb4w95Yctk6qZK-bampzylHYRFvaok6A76iwg6l92IFSgtCAy23pywXj__tfvPM6oYukGLzVvbFH1quzH8xU3kl9OYQBwdJcgBzjRAG4VrG-3FBR2KP9L9g8d4SiWKL7apTYs70Fw1hF9oC-smi-Jx0D2"/>
+</div>
+<div class="p-6">
+<div class="flex items-center text-[#FF6B00] mb-2">
+<span class="material-symbols-outlined mr-2" data-weight="fill">verified</span>
+<span class="font-label-caps text-label-caps">COMPLETED</span>
+</div>
+<h4 class="font-headline-md text-[18px] mb-2">Heritage Hotel Restoration</h4>
+<p class="font-body-md text-secondary mb-4">Structural revival of a 50-year-old landmark in Mathura.</p>
+<a class="text-primary font-bold text-label-caps hover:underline" href="#">CASE STUDY →</a>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 group bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern office building interior under construction, focusing on the precision of the electrical and plumbing layouts before finishing. The scene is bright and organized, showing the internal skeleton of a high-end corporate space in Vrindavan." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9Clny4GmSk0AEy_SSEpN747fLfjOzn_ArKqW0TJKYIx_IpZNkV0zHlwksD350CnfwA_hktWAPVrdulQ6Eu_Ie9cC1zd0Ra5U4gqoHr2duqqaxB5eQ8oaiVwY1snX-UXReLdYqb84iBYqtFohz_0HNYNx9IA1V0oTOm1PpgAaX8b28HgOidcNyBRk7VYV-_OuSxkBw0t-I9uTuZWCtjHleV-23mq_RITawtv4Pf0Pzh3YeCDUCUxPQtbz0qR7e01iNjstd3iOmWjPQ"/>
+</div>
+<div class="p-6">
+<div class="flex items-center text-[#FF6B00] mb-2">
+<span class="material-symbols-outlined mr-2" data-weight="fill">verified</span>
+<span class="font-label-caps text-label-caps">COMPLETED</span>
+</div>
+<h4 class="font-headline-md text-[18px] mb-2">Tech Park Phase I</h4>
+<p class="font-body-md text-secondary mb-4">Modern office infrastructure for growing startups.</p>
+<a class="text-primary font-bold text-label-caps hover:underline" href="#">CASE STUDY →</a>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 group bg-white shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A close-up shot of high-quality masonry and brickwork on a residential perimeter wall in Mathura. The image shows the neatness of the mortar joints and the perfect alignment of the bricks, reflecting precision craftsmanship and industrial minimalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAohV1Me1cjyL4_--aeASiY-sAU_s_fMVDkCo3VQvHxMtwEx5XuQLdjivCeFRpO1Ba3bYmV8GBzB8K500UDnvVB7zw-Z0vKRvQZuuDIL8Np_l7tk9Xkha9nJu6_x8UONr2kw5Mu_pWBqdgxnfkMG5J31xJTVZEM-pMlsn-Rc0nb2wNpvw4Ip9r5HXMYmsEcNtD7r34aXr3AALKLDlo7vntEyF3LcU3vZYHC3XrVK357mcmOgrPeAhCd_YhtkbaOpCz4b1EloZSaGweT"/>
+</div>
+<div class="p-6">
+<div class="flex items-center text-[#FF6B00] mb-2">
+<span class="material-symbols-outlined mr-2" data-weight="fill">verified</span>
+<span class="font-label-caps text-label-caps">COMPLETED</span>
+</div>
+<h4 class="font-headline-md text-[18px] mb-2">Urban Villa - Sector 5</h4>
+<p class="font-body-md text-secondary mb-4">A showcase of precision brickwork and modern layout.</p>
+<a class="text-primary font-bold text-label-caps hover:underline" href="#">CASE STUDY →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Before/After Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Power of Quality</h2>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Witness the radical transformation of spaces through our dedicated renovation and structural overhaul services.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<!-- Transformation Card 1 -->
+<div class="bg-white p-4 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant">
+<div class="grid grid-cols-2 gap-2 h-80 mb-6">
+<div class="relative group">
+<img class="w-full h-full object-cover grayscale" data-alt="A 'before' image of a dilapidated bathroom with old tiles and broken fixtures. The lighting is dim, emphasizing the need for a total renovation. The atmosphere is aged and worn, serving as a stark contrast to a modern construction upgrade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0ZaTnaalp0fGr8UOgRxRj0MlDtUFL12MaXKkxL3h72hdhra1Fkc66-RuAfe-c1GCnrt85NHjhLgZ-bKku32jGws1hel1oh3UR9J4mG6CiNyMsGxjEBcNVTNLz9tlUXaK7JZMjJJ_j6xrfnEY2lRbkyoOmxsLnBRV9ZTIjAnNZ-Ks-bjBXIan5YyfsDDaUFMJnwfczzLgHVAalIIrODsRoAbCwBR_vkjBHBvagxp4L5CWnZUVmS0A89qvsYlpNDcvOeWMjYYeNrSlU"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 tracking-widest">BEFORE</span>
+</div>
+<div class="relative group">
+<img class="w-full h-full object-cover" data-alt="An 'after' image of a luxury modern bathroom renovation. It features clean white marble walls, a minimalist glass shower, and high-end chrome fixtures. The lighting is bright and airy, creating a premium, hotel-like atmosphere that showcases precision work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFtoZ3QFqRKBm6qsTnRO-60RjZRLJ6ZJB6jnN_r8FyDEZ0Vi6vgd2mtvK7hv-GRvKM2sjD857EDMteQVg_-Mq2BsjOGF6q28zDuLyxxDWeDSe-IydWQ-TqbXbHOtvHwrT4UUA6BpfIdbSa4d7C-zocnNBL8ipZXbJdSAxbvVGGezRXRZgfM3cmmZYLFPWFMPeJ_E98jnNfDKSsTesFp_NKFMKqymq1kOcFG6cVc2JEF0cElm7LQ1pGeilYdhbJOom2fDoGz5I6sE5Q"/>
+<span class="absolute top-4 right-4 bg-[#FF6B00] text-white text-[10px] font-bold px-2 py-1 tracking-widest">AFTER</span>
+</div>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 px-2">Mathura Residential Remodel</h4>
+<p class="font-body-md text-secondary px-2">Complete structural overhaul and interior finish for a luxury townhouse.</p>
+</div>
+<!-- Transformation Card 2 -->
+<div class="bg-white p-4 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant">
+<div class="grid grid-cols-2 gap-2 h-80 mb-6">
+<div class="relative group">
+<img class="w-full h-full object-cover grayscale" data-alt="A 'before' image of a dusty, unfinished commercial floor with exposed wires and raw concrete. The scene is cluttered and dark, representing the early stages of a construction site that requires professional intervention." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuJeLf1slJoeDRgYOANI8AjR9wWxrXkVik-kiVC99n8I4uMvEEpZ56AuDm9-vHewiyRFY68DOQ6Y3Y1d_ykDhm4ImYVem55fyvr8feQJCnod40ZvwjJYhXBNUvmU5atMJsqFVx1b9tWOJvmTZAYH1qORFwDuOTALWMDVI8M8HsEBAjfpl8_pwUoES7g4xXm-XN7DJQBowRr0XP-HBuT1lI8Mkff19CrLZxSdR3XhP4IOY0FDttnAoNVNMfUBI4rXsoaJ7agqFMDxAD"/>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-2 py-1 tracking-widest">BEFORE</span>
+</div>
+<div class="relative group">
+<img class="w-full h-full object-cover" data-alt="An 'after' image of a polished, modern corporate office space in Vrindavan. The design is minimalist with clean lines, ergonomic furniture, and bright natural lighting. The transformation highlights the shift from a raw site to a functional, high-end commercial environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdNuEAV0gqdaCz9fe0RzvspWHqBhx_f01NJWp08Qt6bPFxwn2NjiDo6g6kaoTSntSyrNZXzgI2urycvOvfavOs46Q-2KKFH9pmyiM_Xs9U2LvkmwfJyoYUey0tuRXdx5uzcmtXMkMINohEHeX5ajDtSjE1mvnQLOPAA9PxJNb3ownuHr9nkFALaDPttMiTfnVWckwmtQeP-iszog4ChJI8ojaeR5XGzOjKS4PptlDqxSzeTxEezSDiYgDYf8RC0wP3gT0RuZM87RzS"/>
+<span class="absolute top-4 right-4 bg-[#FF6B00] text-white text-[10px] font-bold px-2 py-1 tracking-widest">AFTER</span>
+</div>
+</div>
+<h4 class="font-headline-md text-[20px] mb-2 px-2">Vrindavan Corporate Hub</h4>
+<p class="font-body-md text-secondary px-2">Converted a raw warehouse space into a Category-A corporate headquarters.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 bg-white relative overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-margin-desktop relative z-10">
+<div class="bg-primary text-white p-16 flex flex-col md:flex-row items-center justify-between">
+<div class="max-w-2xl text-center md:text-left mb-8 md:mb-0">
+<h2 class="font-display-lg text-[40px] leading-tight mb-4">Ready to start your project?</h2>
+<p class="font-body-lg text-body-lg opacity-80">Partner with Mathura's most dependable construction firm. Let's build your vision together with precision and integrity.</p>
+</div>
+<div class="flex flex-col space-y-4">
+<button class="bg-[#FF6B00] text-white px-10 py-5 font-headline-md text-[18px] font-bold hover:scale-105 transition-all shadow-lg uppercase">Get a free estimate</button>
+<button class="border border-white/30 text-white px-10 py-5 font-headline-md text-[18px] font-bold hover:bg-white hover:text-primary transition-all uppercase">Contact Us</button>
+</div>
+</div>
+</div>
+<!-- Decorative Industrial Background Element -->
+<div class="absolute right-0 bottom-0 opacity-5 -mb-20 pointer-events-none">
+<span class="material-symbols-outlined text-[400px]">architecture</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t border-primary-container">
+<div class="max-w-[1280px] mx-auto py-16 px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<div class="space-y-6">
+<div class="font-headline-lg text-headline-lg text-on-primary">SSP CONSTRUCTION</div>
+<p class="font-body-md text-on-primary-container leading-relaxed">
+                    Mathura &amp; Vrindavan's leading construction partner for premium residential and commercial developments. Built on a foundation of trust and engineering excellence.
+                </p>
+<div class="flex space-x-4">
+<a class="hover:text-tertiary-fixed transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-tertiary-fixed transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="hover:text-tertiary-fixed transition-colors" href="#"><span class="material-symbols-outlined">call</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps mb-8 text-[#FF6B00]">OUR SERVICES</h5>
+<ul class="space-y-4 font-body-md text-on-primary-container">
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Residential Construction</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Commercial Projects</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Renovations</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Site Inspection</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Project Consultation</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps mb-8 text-[#FF6B00]">OFFICE LOCATION</h5>
+<p class="font-body-md text-on-primary-container mb-4">
+                    Main Road, Near Krishna Janmabhoomi,<br/>
+                    Mathura, Uttar Pradesh - 281001
+                </p>
+<a class="font-label-caps text-label-caps text-on-primary underline" href="#">Privacy Policy</a>
+<p class="mt-8 font-label-caps text-[10px] text-on-primary-container opacity-50 uppercase tracking-widest">
+                    © 2024 SSP Construction. Built for Mathura &amp; Vrindavan.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
