@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#584324",
+                    "secondary-container": "#d8e1e7",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#e1c299",
+                    "on-secondary-fixed-variant": "#3f484d",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#091d2e",
+                    "outline-variant": "#c4c6cd",
+                    "primary-fixed-dim": "#b5c8df",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e2e2e5",
+                    "surface-container": "#eeeef0",
+                    "secondary": "#576065",
+                    "surface-tint": "#4e6073",
+                    "on-secondary-fixed": "#141d21",
+                    "on-tertiary-fixed": "#281801",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f9f9fc",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#bfc8ce",
+                    "tertiary-fixed": "#feddb3",
+                    "on-primary-fixed-variant": "#36485b",
+                    "secondary-fixed": "#dbe4ea",
+                    "primary-fixed": "#d1e4fb",
+                    "outline": "#74777d",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e8e8ea",
+                    "surface-variant": "#e2e2e5",
+                    "on-surface-variant": "#43474c",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#95a8bd",
+                    "on-secondary-container": "#5b6469",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#f9f9fc",
+                    "on-background": "#1a1c1e",
+                    "inverse-surface": "#2f3133",
+                    "inverse-primary": "#b5c8df",
+                    "surface": "#f9f9fc",
+                    "tertiary": "#342307",
+                    "on-tertiary-container": "#bea17b",
+                    "inverse-on-surface": "#f0f0f3",
+                    "tertiary-container": "#4c381a",
+                    "surface-container-low": "#f3f3f6",
+                    "on-surface": "#1a1c1e",
+                    "primary": "#152738",
+                    "primary-container": "#2b3d4f",
+                    "surface-dim": "#dadadc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter-desktop": "24px",
+                    "gutter-mobile": "16px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Montserrat"],
+                    "display-lg-mobile": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .btn-expansion:hover {
+            letter-spacing: 0.1em;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface sticky top-0 z-50 border-b border-outline-variant">
+<nav class="max-w-[1280px] mx-auto flex justify-between items-center px-margin-desktop h-20">
+<div class="text-headline-md font-headline-md font-bold tracking-tighter text-primary">SSP CONSTRUCTION</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1" href="#">Services</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Projects</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">About Us</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-[#FF6B00] text-white font-headline-md text-[14px] px-6 py-3 font-bold uppercase tracking-widest hover:scale-105 duration-150 transition-all rounded-sm">
+                Get a Quote
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center overflow-hidden bg-primary">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40" data-alt="A professional high-angle shot of a large-scale construction site in Mathura during the golden hour. The scene features steel reinforcements, heavy machinery like cranes against a clear sky, and structured concrete foundations. The lighting is warm and industrial, highlighting the architectural precision and massive scale of the engineering project. The overall mood is authoritative and dependable, reflecting premium corporate construction standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwEMSDsJAEJaWAa4E4qv9x6FcN6kGD5IzTPFEpU5t5jE1bKUXdU1E17mpRSWt24eElsQB_h3jsSOZWeswoAwUZwX8yRUPEuaF5bm6PHwIF3Lfl-mfsIp4iC0mvXo8wQOkWmqn-9XAr_D5Eltu9fv4oKZaywR9kw_2eeZkJEXFgqI1_M5RYXZZTB5GMFkTHltu9whlw05hHxBimurQyQ-nCMcJu6jNUFcFQa5PqO4dCCmkeyrLRiXb-JV9ie5hhvjqvF7MAJBebrv1S"/>
+<div class="relative max-w-[1280px] mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="inline-block font-label-caps text-label-caps text-tertiary-fixed mb-4">PREMIER CONSTRUCTION SERVICES</span>
+<h1 class="font-display-lg text-display-lg text-white mb-6">Building the Future of Mathura &amp; Vrindavan</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim max-w-lg mb-8">Engineering excellence with structural integrity. From luxury residential villas to industrial complexes, we are the trusted house builders in Mathura.</p>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-24 max-w-[1280px] mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Our Construction Expertise</h2>
+<div class="w-20 h-1 bg-[#FF6B00] mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Service 1: Residential -->
+<div class="bg-white border border-outline-variant p-8 group hover:shadow-xl transition-all duration-300">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-[#FF6B00]" data-icon="home_work">home_work</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Residential Construction</h3>
+<p class="font-body-md text-body-md text-secondary mb-8">Specialized house builders in Mathura providing end-to-end solutions for luxury villas, apartments, and independent homes designed for modern living.</p>
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                        GET QUOTE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 2: Commercial -->
+<div class="bg-white border border-outline-variant p-8 group hover:shadow-xl transition-all duration-300">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-[#FF6B00]" data-icon="apartment">apartment</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Commercial Projects</h3>
+<p class="font-body-md text-body-md text-secondary mb-8">Building state-of-the-art office spaces, retail outlets, and shopping complexes across Vrindavan with a focus on durability and business functionality.</p>
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                        GET QUOTE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 3: Renovation -->
+<div class="bg-white border border-outline-variant p-8 group hover:shadow-xl transition-all duration-300">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-[#FF6B00]" data-icon="handyman">handyman</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Home Renovation</h3>
+<p class="font-body-md text-body-md text-secondary mb-8">Complete interior and exterior makeover services. We breathe new life into existing structures with modern aesthetics and structural upgrades.</p>
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                        GET QUOTE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 4: Interior & Exterior -->
+<div class="bg-white border border-outline-variant p-8 group hover:shadow-xl transition-all duration-300">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-[#FF6B00]" data-icon="format_paint">format_paint</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Interior &amp; Exterior Work</h3>
+<p class="font-body-md text-body-md text-secondary mb-8">Detailed finishing work including premium painting, architectural facades, and luxury interior fit-outs tailored to your specific style requirements.</p>
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                        GET QUOTE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 5: Civil Engineering -->
+<div class="bg-white border border-outline-variant p-8 group hover:shadow-xl transition-all duration-300">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-[#FF6B00]" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Civil Engineering</h3>
+<p class="font-body-md text-body-md text-secondary mb-8">Providing foundational structural design, site inspection, and technical engineering services for complex urban infrastructure projects in Uttar Pradesh.</p>
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                        GET QUOTE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 6: Contracting -->
+<div class="bg-white border border-outline-variant p-8 group hover:shadow-xl transition-all duration-300">
+<div class="mb-6">
+<span class="material-symbols-outlined text-4xl text-[#FF6B00]" data-icon="contract">contract</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">General Contracting</h3>
+<p class="font-body-md text-body-md text-secondary mb-8">Full-service project management from site clearance to handover. Our skilled labor and material procurement ensure projects are delivered on time.</p>
+<button class="font-label-caps text-label-caps text-primary flex items-center gap-2 group-hover:gap-4 transition-all">
+                        GET QUOTE <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Why Choose Us - Asymmetric Layout -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-20">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-[#FF6B00] -z-10"></div>
+<img class="w-full h-[500px] object-cover shadow-2xl" data-alt="A close-up shot of a construction worker in a hard hat and safety vest examining blueprints on a busy construction site. The background shows scaffolding and structural steel against a bright morning sun. The image conveys a sense of precision, professionalism, and high-quality craftsmanship. The lighting is crisp and natural, emphasizing the industrial textures of concrete and metal in a premium corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwBVbHD6c3x4HfrUiufIZZQ3yBmOUXtM0UF8KbfJhJyWnbav4rrbKpFi4hVxD_uYIcRg3YhxExjn6CK4k8399tJN6FfNzK7eRV1cseeNxzXLRr1Qovb_gA-yX8ZY-UrCDOmNDOkfMXyEL-xfKbU1Alp32PRJ-bW83AAIjWVp434ka8JcUFrJEchEoOM5v-ouCxQXzBSKZAAtvg_Oe_Z4KBb96xP9LRut9VmtqwVnjyGbKzb5FoT1txR-MQzilgO6ujga3KOBkOEwqP"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Why Choose SSP Construction?</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="engineering">engineering</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary mb-2">Skilled Professional Labor</h4>
+<p class="font-body-md text-body-md text-secondary">Our team consists of certified engineers and experienced craftsmen committed to safety and precision in every brick laid.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="construction">construction</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary mb-2">Premium Grade Materials</h4>
+<p class="font-body-md text-body-md text-secondary">We source only the highest quality cement, steel, and finishes, ensuring that every project is truly "built to last".</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 bg-white flex items-center justify-center border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-[20px] text-primary mb-2">Vrindavan's Trusted Builder</h4>
+<p class="font-body-md text-body-md text-secondary">With years of local experience, we understand the specific geological and architectural needs of the Mathura region.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary text-white text-center">
+<div class="max-w-[1280px] mx-auto px-margin-desktop">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Ready to Start Your Project?</h2>
+<p class="font-body-lg text-body-lg mb-10 max-w-2xl mx-auto opacity-80">Consult with the best house builders in Mathura today. We provide transparent estimates and expert guidance.</p>
+<button class="bg-[#FF6B00] text-white font-headline-md px-12 py-5 font-bold uppercase tracking-widest btn-expansion transition-all duration-300 rounded-sm">
+                    Request Site Inspection
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary border-t border-primary-container">
+<div class="max-w-[1280px] mx-auto py-16 px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<div class="space-y-6">
+<div class="font-headline-lg text-headline-lg text-on-primary">SSP CONSTRUCTION</div>
+<p class="font-body-md text-body-md text-on-primary-container">Delivering excellence in construction services across Mathura and Vrindavan. Your partner in building dreams and infrastructure.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined opacity-60 hover:opacity-100 cursor-pointer" data-icon="location_on">location_on</span>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-caps text-label-caps text-tertiary-fixed">OUR SERVICES</h5>
+<ul class="space-y-3 font-body-md text-body-md text-on-primary-container">
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Residential Construction</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Commercial Projects</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Renovations</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Site Inspection</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-caps text-label-caps text-tertiary-fixed">CONTACT US</h5>
+<ul class="space-y-4 font-body-md text-body-md text-on-primary-container">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="call">call</span>
+<span>+91 98765 43210</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="mail">mail</span>
+<span>info@sspconstruction.com</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="home_pin">home_pin</span>
+<span>Sector 5, Vrindavan, Uttar Pradesh, 281121</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1280px] mx-auto px-margin-desktop py-8 border-t border-primary-container text-center text-label-caps font-label-caps text-on-primary-container opacity-60">
+            © 2024 SSP Construction. Built for Mathura &amp; Vrindavan.
+        </div>
+</footer>
+</body></html>
